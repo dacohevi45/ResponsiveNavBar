@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--navbar-->
+    <div class="navbar">
+        <div class="logo"><a href="#">DCH WEB DEV</a></div>
+        <ul class="links">
+            <li><a href="hero">HOME</a></li>
+            <li><a href="about">ABOUT</a></li>
+            <li><a href="services">SERVICES</a></li>
+            <li><a href="contact">CONTACT</a></li>
+        </ul>
+
+        <!--boton del nav al ponerse responsive-->
+        <a href="#" class="action_btn">Get Started</a>
+        <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <!--cuando se ponga responsive-->
+        <div class="dropdown_menu">
+                <li><a href="hero">HOME</a></li>
+                <li><a href="about">ABOUT</a></li>
+                <li><a href="services">SERVICES</a></li>
+                <li><a href="contact">CONTACT</a></li>
+                <li><a href="get started">Get Started</a></li>
+        </div>
+
+        <!--js-->
+        <script>
+            let toggleBtn = document.querySelector('.toggle_btn');
+            let toggleBtnIcon = document.querySelector('.toggle_btn i');
+            let dropDownMenu = document.querySelector('.dropdown_menu');
+
+            toggleBtn.onclick = function (){
+                dropDownMenu.classList.toggle('open');
+                const isOpen = dropDownMenu.classList.toggle('opne');
+
+                toggleBtnIcon.classList = isOpen 
+                 ? "fa-solid fa-xmark" 
+                 : "fa-solid fa-bars"
+            }
+        </script>
+    </div>
+
+        <!--contenido-->
+        <main>
+            <div class="hero">
+                <h1>WELCOME</h1>
+                <p>este es un trabajo hecho por mi. <br> espero lo disfrutes </p>
+            </div>
+        </main>
+        
+</body>
+</html>
